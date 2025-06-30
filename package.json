@@ -23,8 +23,10 @@
   "homepage": "https://github.com/lazy-soulz/LV-Connect#readme",
   "dependencies": {
     "@vitejs/plugin-react": "^4.6.0",
+    "formik": "^2.4.6",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-icons": "^5.5.0",
     "react-router-dom": "^7.6.3",
     "vite": "^7.0.0"
   },
