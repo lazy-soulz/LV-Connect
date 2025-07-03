@@ -5,6 +5,7 @@ import ForgotPassword from './pages/auth/ForgotPassword';
 import ResetPassword from './pages/auth/ResetPassword';
 import PrivateRoute from './routes/PrivateRoute';
 import PublicRoute from './routes/PublicRoute';
+import Dashboard from './components/Dashboard';
 
 function App() {
   return (
@@ -17,10 +18,8 @@ function App() {
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/reset-password" element={<ResetPassword />} />
         </Route>
-        {/* Example Private Route (replace with your dashboard or home) */}
-        <Route element={<PrivateRoute><Outlet /></PrivateRoute>}>
-          <Route path="/dashboard" element={<div className="p-8">Dashboard (Private)</div>} />
-        </Route>
+        {/* Dashboard route is now public for testing */}
+        <Route path="/dashboard" element={<Dashboard />} />
         {/* Default route */}
         <Route path="*" element={<Navigate to="/login" replace />} />
       </Routes>

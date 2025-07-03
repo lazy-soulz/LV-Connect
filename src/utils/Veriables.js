@@ -1,0 +1,74 @@
+ import dashboard from "../assets/dashboard.svg"
+ import crm from "../assets/crm.svg"
+ import automation from "../assets/automation.svg"
+ import chat from "../assets/chat.svg"
+ import myProjects from "../assets/projects.svg"
+ import integrations from "../assets/integration.svg"
+ import manage from "../assets/manage.svg"
+ import reports from "../assets/reports.svg"
+ import settings from "../assets/settings.svg"
+ 
+ export const menuItems = [
+    {
+      id: "dashboard",
+      icon: dashboard,
+      path: "/dashboard",
+      label: "Dashboard",
+    },
+    {
+      id: "crm",
+      icon: crm,
+      path: "/crm",
+      label: "CRM",
+    },
+
+    {
+      id: "automation",
+      icon: automation,
+      path: "/automation",
+      label: "Automation",
+    },
+
+    {
+      id: "chat",
+      icon: chat,
+      path: "/chat",
+      label: "Chat",
+    },
+
+    {
+      id: "my projects",
+      icon: myProjects,
+      path: "/my-projects",
+      label: "My Projects",
+    },
+
+    {
+      id: "integrations",
+      icon: integrations,
+      path: "/integration",
+      label: "Integration",
+    },
+
+    {
+      id: "manage",
+      icon: manage,
+      path: "/manage",
+      label: "Manage",
+    },
+
+    {
+      id: "reports",
+      icon: reports,
+      path: "/reports",
+      label: "Reports",
+    },
+
+    {
+      id: "settings",
+      icon: settings,
+      path: "/settings",
+      label: "Settings",
+    },
+
+  ]
