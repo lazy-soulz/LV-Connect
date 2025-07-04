@@ -47,7 +47,7 @@ function DashViewLayout({ children }) {
       <div className="flex-1 flex flex-col min-w-0 ml-[20px] gap-[17px]">
         <Header />
         <div className="flex-1 overflow-auto">
-          {/* {children} */}
+          {children}
         </div>
       </div>
     </div>
