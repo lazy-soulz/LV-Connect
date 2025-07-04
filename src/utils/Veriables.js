@@ -18,56 +18,56 @@
     {
       id: "crm",
       icon: crm,
-      path: "/crm",
+      path: "/dashboard/crm",
       label: "CRM",
     },
 
     {
       id: "automation",
       icon: automation,
-      path: "/automation",
+      path: "/dashboard/automation",
       label: "Automation",
     },
 
     {
       id: "chat",
       icon: chat,
-      path: "/chat",
+      path: "/dashboard/chat",
       label: "Chat",
     },
 
     {
       id: "my projects",
       icon: myProjects,
-      path: "/my-projects",
+      path: "/dashboard/my-projects",
       label: "My Projects",
     },
 
     {
       id: "integrations",
       icon: integrations,
-      path: "/integration",
+      path: "/dashboard/integration",
       label: "Integration",
     },
 
     {
       id: "manage",
       icon: manage,
-      path: "/manage",
+      path: "/dashboard/manage",
       label: "Manage",
     },
 
     {
       id: "reports",
       icon: reports,
-      path: "/reports",
+      path: "/dashboard/reports",
       label: "Reports",
     },
 
     {
       id: "settings",
       icon: settings,
-      path: "/settings",
+      path: "/dashboard/settings",
       label: "Settings",
     },
 
