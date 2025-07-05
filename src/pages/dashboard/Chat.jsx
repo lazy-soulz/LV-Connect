@@ -134,28 +134,24 @@ const Chat = () => {
         <div className="flex-1 overflow-y-auto mt-[24px]">
           <div className=' flex flex-col gap-[6px] '>
             {chats.map((chat) => (
-              <>
-                <div
-                  key={chat.id}
-                  onClick={() => setSelectedChat(chat.id)}
-                  className={`${selectedChat === chat.id ? "bg-[#E5EDF5] border-l-[1px] border-[#0057A3]" : "bg-[#FFFFFF]"} h-[117px] pl-[34px] pr-[25px] py-[18px] cursor-pointer`}
+              <div
+                key={chat.id}
+                onClick={() => setSelectedChat(chat.id)}
+                className={`${selectedChat === chat.id ? "bg-[#E5EDF5] border-l-[1px] border-[#0057A3]" : "bg-[#FFFFFF]"} h-[117px] pl-[34px] pr-[25px] py-[18px] cursor-pointer`}
+              >
+                <div className=' flex justify-between items-center'>
+                  <div className=' flex flex-col '>
+                    <p className=' text-[16px] font-inter font-[600] text-[#0D141C]'>{chat.name}</p>
+                    <p className=' text-[14px] leading-[20px] font-inter font-[500] text-[#0D141C]'>{chat.lastMessage}</p>
 
-                >
-                  <div className=' flex justify-between items-center'>
-                    <div className=' flex flex-col '>
-                      <p className=' text-[16px] font-inter font-[600] text-[#0D141C]'>{chat.name}</p>
-                      <p className=' text-[14px] leading-[20px] font-inter font-[500] text-[#0D141C]'>{chat.lastMessage}</p>
-
-                    </div>
-                    {chat.hasNewMessage && chat.unreadCount > 0 && (
-                      <span className=" bg-[#AB131D] font-bold rounded-[50px] w-[21px] h-[18px]  text-[#FFFFFF] font-[700] text-[10px] font-inter  flex items-center justify-center shrink-0">
-                        {chat.unreadCount}
-                      </span>
-                    )}
                   </div>
+                  {chat.hasNewMessage && chat.unreadCount > 0 && (
+                    <span className=" bg-[#AB131D] font-bold rounded-[50px] w-[21px] h-[18px]  text-[#FFFFFF] font-[700] text-[10px] font-inter  flex items-center justify-center shrink-0">
+                      {chat.unreadCount}
+                    </span>
+                  )}
                 </div>
-              </>
-
+              </div>
             ))}
           </div>
 

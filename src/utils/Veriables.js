@@ -1,104 +1,127 @@
- import dashboard from "../assets/dashboard.svg"
- import crm from "../assets/crm.svg"
- import automation from "../assets/automation.svg"
- import chat from "../assets/chat.svg"
- import myProjects from "../assets/projects.svg"
- import integrations from "../assets/integration.svg"
- import manage from "../assets/manage.svg"
- import reports from "../assets/reports.svg"
- import settings from "../assets/settings.svg"
- 
- export const menuItems = [
-    {
-      id: "dashboard",
-      icon: dashboard,
-      path: "/dashboard",
-      label: "Dashboard",
-    },
-    {
-      id: "crm",
-      icon: crm,
-      path: "/dashboard/crm",
-      label: "CRM",
-    },
+import dashboard from "../assets/dashboard.svg"
+import crm from "../assets/crm.svg"
+import automation from "../assets/automation.svg"
+import chat from "../assets/chat.svg"
+import myProjects from "../assets/projects.svg"
+import integrations from "../assets/integration.svg"
+import manage from "../assets/manage.svg"
+import reports from "../assets/reports.svg"
+import settings from "../assets/settings.svg"
+import { FaUserPlus } from "react-icons/fa";
+import { RiTeamFill } from "react-icons/ri";
+import { FaFileInvoiceDollar } from "react-icons/fa6";
 
-    {
-      id: "automation",
-      icon: automation,
-      path: "/dashboard/automation",
-      label: "Automation",
-    },
+export const menuItems = [
+  {
+    id: "dashboard",
+    icon: dashboard,
+    path: "/dashboard",
+    label: "Dashboard",
+  },
+  {
+    id: "crm",
+    icon: crm,
+    path: "/dashboard/crm",
+    label: "CRM",
+  },
 
-    {
-      id: "chat",
-      icon: chat,
-      path: "/dashboard/chat",
-      label: "Chat",
-    },
+  {
+    id: "automation",
+    icon: automation,
+    path: "/dashboard/automation",
+    label: "Automation",
+  },
 
-    {
-      id: "my projects",
-      icon: myProjects,
-      path: "/dashboard/my-projects",
-      label: "My Projects",
-    },
+  {
+    id: "chat",
+    icon: chat,
+    path: "/dashboard/chat",
+    label: "Chat",
+  },
 
-    {
-      id: "integrations",
-      icon: integrations,
-      path: "/dashboard/integration",
-      label: "Integration",
-    },
+  {
+    id: "my projects",
+    icon: myProjects,
+    path: "/dashboard/my-projects",
+    label: "My Projects",
+  },
 
-    {
-      id: "manage",
-      icon: manage,
-      path: "/dashboard/manage",
-      label: "Manage",
-    },
+  {
+    id: "integrations",
+    icon: integrations,
+    path: "/dashboard/integration",
+    label: "Integration",
+  },
 
-    {
-      id: "reports",
-      icon: reports,
-      path: "/dashboard/reports",
-      label: "Reports",
-    },
+  {
+    id: "manage",
+    icon: manage,
+    path: "/dashboard/manage",
+    label: "Manage",
+  },
 
-    {
-      id: "settings",
-      icon: settings,
-      path: "/dashboard/settings",
-      label: "Settings",
-    },
+  {
+    id: "reports",
+    icon: reports,
+    path: "/dashboard/reports",
+    label: "Reports",
+  },
 
-  ]
-
-  export const projects = [
+  {
+    id: "settings",
+    icon: settings,
+    path: "/dashboard/settings",
+    label: "Settings",
+    children: [
       {
-        id: 1,
-        projectName: "XScholar ERP",
-        status: "Active",
-        date: "2021-01-01",
+        id: "users",
+        label: "Users",
+        path: "/dashboard/settings/users",
+        icon: FaUserPlus
       },
-
       {
-        id: 2,
-        projectName: "Smart RFID Cards",
-        status: "Active",
-        date: "2021-01-01",
+        id: "team",
+        label: "Team",
+        path: "/dashboard/settings/team",
+        icon: RiTeamFill
       },
-
       {
-        id: 3,
-        projectName: "Smart RFID Cards",
-        status: "Active",
-        date: "2021-01-01",
-      },
+        id: "billing-usage",
+        label: "Billing & Usage",
+        path: "/dashboard/settings/billing-usage",
+        icon: FaFileInvoiceDollar
 
-      {
-        id: 4,
-        projectName: "Smart RFID Cards",
-        status: "Active",
-        date: "2021-01-01",
       },
-  ] 
+    ],
+  },
+]
+
+export const projects = [
+  {
+    id: 1,
+    projectName: "XScholar ERP",
+    status: "Active",
+    date: "2021-01-01",
+  },
+
+  {
+    id: 2,
+    projectName: "Smart RFID Cards",
+    status: "Active",
+    date: "2021-01-01",
+  },
+
+  {
+    id: 3,
+    projectName: "Smart RFID Cards",
+    status: "Active",
+    date: "2021-01-01",
+  },
+
+  {
+    id: 4,
+    projectName: "Smart RFID Cards",
+    status: "Active",
+    date: "2021-01-01",
+  },
+] 

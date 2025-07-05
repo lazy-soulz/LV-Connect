@@ -12,7 +12,7 @@
 
 /* Set Inter as the default font family */
 body {
-  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 html, body {
   margin: 0;
