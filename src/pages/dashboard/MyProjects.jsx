@@ -1,60 +1,88 @@
 import React from 'react';
+import InputBox from '../../components/micros/InputBox';
+import { useFormik } from 'formik';
+import { projects } from '../../utils/Veriables';
+import { SlGraph } from "react-icons/sl";
+
 
 const MyProjects = () => {
+
+  const [selectedProjectId, setSelectedProjectId] = React.useState(1);
+
+  const formik = useFormik({
+    initialValues: {
+      projectName: "",
+      projectEmail: "",
+    },
+  });
   return (
-    <div className="bg-white rounded-lg p-6 shadow-sm">
-      <div className="flex justify-between items-center mb-6">
-        <h1 className="text-2xl font-bold text-gray-800">My Projects</h1>
-        <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-          + New Project
-        </button>
+    <div className=' bg-[#FFFFFF] h-[100%] rounded-[8px] px-[60px] py-[17px] flex flex-col gap-[12px]'>
+      <p className=' font-inter font-[700] text-[#0D141C] leading-[40px] text-[20px]'>My Projects</p>
+      <div className=' border border-[#E5EDF5] rounded-[8px] w-[912px] h-[231px]'>
+        <div className=' flex justify-between items-center'>
+          <div className=' flex pl-[35px] py-[41px] flex flex-col gap-[12px]'>
+            <p className='text-[20px] font-[700] font-inter text-[#000000]'>Create New Project</p>
+            <p className=' text-[14px] font-[500] font-inter text-[#000000] '>Let’s schedule your project.</p>
+
+            <div className=' w-full  flex  gap-[40px]'>
+
+
+              <input
+                type="text"
+                placeholder="Project Name"
+                value={formik.values.projectName}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                name="projectName"
+
+                className=" w-[228px] h-[56px] bg-[#F7FAFC] border-[1px] border-[#CCDBEB] p-[15px] rounded-[8px]  outline-none placeholder:text-[#7A7E82] placeholder:text-[16px] placeholder:font-[400] placeholder:leading-[24px] placeholder:font-inter  placeholder:text-[#4575A1]"
+              />
+
+              <input
+                type="text"
+                placeholder="Project email"
+                value={formik.values.projectEmail}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                name="projectEmail"
+
+                className=" w-[228px] h-[56px] bg-[#F7FAFC] border-[1px] border-[#CCDBEB] p-[15px] rounded-[8px]  outline-none placeholder:text-[#7A7E82] placeholder:text-[16px] placeholder:font-[400] placeholder:leading-[24px] placeholder:font-inter  placeholder:text-[#4575A1]"
+              />
+
+            </div>
+          </div>
+
+
+          <div>
+            <img src="/src/assets/project_section.png" alt="plus" />
+          </div>
+        </div>
       </div>
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
-          <div className="flex justify-between items-start mb-4">
-            <h3 className="text-lg font-semibold text-gray-800">E-commerce Platform</h3>
-            <span className="px-2 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-800">Active</span>
-          </div>
-          <p className="text-gray-600 mb-4">Building a modern e-commerce platform with React and Node.js</p>
-          <div className="flex justify-between items-center">
-            <div className="flex items-center space-x-2">
-              <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-              <span className="text-sm text-gray-500">75% Complete</span>
+      <p className=' font-inter font-[600] text-[#0D141C] leading-[40px] text-[20px] '>Ongoing Projects</p>
+      <div className="w-[912px] grid grid-cols-3 gap-y-[32px]">
+        {projects.map((project) => (
+          <div
+            onClick={() => setSelectedProjectId(project.id)}
+            key={project.id}
+            className={` ${selectedProjectId === project.id ? "bg-[#0057A3]" : " bg-[#E5EDF5]"} w-[275px] h-[116px] rounded-[8px] px-[15px] py-[14px] cursor-pointer`}
+          >
+            <div className=' flex gap-[12px] items-center'>
+              {/* icons */}
+              <div className=' bg-[#FFFFFF] h-[30px] w-[33px] flex items-center justify-center rounded-[8px]'>
+                <div className=' bg-[#0057A3] flex items-center justify-center'>
+                <SlGraph color='#FFFFFF' size={18} /> 
+                </div>
+              </div>
+              {/* project */}
+                <div className=' flex flex-col '>
+                   <p className={`${selectedProjectId === project.id ? "text-[#FFFFFF]" : "text-[#4575A1]"} font-inter font-[700]  text-[20px]`}>{project.projectName}</p>
+                   <p className={`${selectedProjectId === project.id ? "text-[#FFFFFF]" : "text-[#4575A1]"} font-inter font-[500] text-[14px]`}> status: {project.status}</p>
+                </div>
+               
             </div>
-            <span className="text-sm text-gray-500">Due: Dec 15</span>
+            
           </div>
-        </div>
-        
-        <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
-          <div className="flex justify-between items-start mb-4">
-            <h3 className="text-lg font-semibold text-gray-800">Mobile App</h3>
-            <span className="px-2 py-1 text-xs font-semibold rounded-full bg-yellow-100 text-yellow-800">In Progress</span>
-          </div>
-          <p className="text-gray-600 mb-4">Cross-platform mobile application for task management</p>
-          <div className="flex justify-between items-center">
-            <div className="flex items-center space-x-2">
-              <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
-              <span className="text-sm text-gray-500">45% Complete</span>
-            </div>
-            <span className="text-sm text-gray-500">Due: Jan 20</span>
-          </div>
-        </div>
-        
-        <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
-          <div className="flex justify-between items-start mb-4">
-            <h3 className="text-lg font-semibold text-gray-800">API Documentation</h3>
-            <span className="px-2 py-1 text-xs font-semibold rounded-full bg-blue-100 text-blue-800">Planning</span>
-          </div>
-          <p className="text-gray-600 mb-4">Comprehensive API documentation for the backend services</p>
-          <div className="flex justify-between items-center">
-            <div className="flex items-center space-x-2">
-              <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-              <span className="text-sm text-gray-500">20% Complete</span>
-            </div>
-            <span className="text-sm text-gray-500">Due: Feb 10</span>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );

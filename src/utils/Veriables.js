@@ -72,3 +72,33 @@
     },
 
   ]
+
+  export const projects = [
+      {
+        id: 1,
+        projectName: "XScholar ERP",
+        status: "Active",
+        date: "2021-01-01",
+      },
+
+      {
+        id: 2,
+        projectName: "Smart RFID Cards",
+        status: "Active",
+        date: "2021-01-01",
+      },
+
+      {
+        id: 3,
+        projectName: "Smart RFID Cards",
+        status: "Active",
+        date: "2021-01-01",
+      },
+
+      {
+        id: 4,
+        projectName: "Smart RFID Cards",
+        status: "Active",
+        date: "2021-01-01",
+      },
+  ] 

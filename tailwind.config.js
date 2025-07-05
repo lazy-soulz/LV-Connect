@@ -5,7 +5,6 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
     colors: {
       'background': '#FFFFFF',
       "inputcolors": "#E5EDF5",
@@ -14,6 +13,7 @@ export default {
     fontFamily: {
       'inter': ['Inter', 'sans-serif'],
     },
+    extend: {},
   },
   plugins: [],
 } 
