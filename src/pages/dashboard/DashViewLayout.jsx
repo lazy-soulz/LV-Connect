@@ -37,7 +37,7 @@ function DashViewLayout({ children }) {
   }, []); 
  
   return (
-    <div className="bg-[#f8f9fe] h-screen w-screen flex">
+    <div className="bg-[#F5F7FB] h-screen w-screen flex">
       {/* Sidebar - Fixed position */}
       <div className={`${isMobileScreen ? 'hidden' : 'block'} flex-shrink-0`}>
         <Sidebar setCollapse={setCollapse} collapse={collapse} />

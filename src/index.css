@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 /* Reset all margins and paddings */
 * {
   margin: 0;
@@ -10,6 +9,11 @@
   box-sizing: border-box;
 }
 
+
+/* Set Inter as the default font family */
+body {
+  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+}
 html, body {
   margin: 0;
   padding: 0;

@@ -54,7 +54,7 @@ const MyProjects = () => {
 
 
           <div>
-            <img src="/src/assets/project_section.png" alt="plus" />
+            <img src="/src/assets/project_section_new.png" alt="plus" />
           </div>
         </div>
       </div>
