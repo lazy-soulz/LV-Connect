@@ -79,7 +79,7 @@ const Sidebar = ({ collapse, setCollapse }) => {
 
               {/* Child Items */}
               {hasChildren && isOpen && !collapse && (
-                <div className=" bg-[#F7FAFC] rounded-[8px] py-[12px] px-[24px] mt-[4px] flex flex-col gap-[12px]">
+                <div className=" bg-[#F7FAFC] rounded-[8px] py-[`12px] px-[24px] mt-[4px] flex flex-col gap-[12px]">
                   {item.children.map((child) => {
                     const isActive = location.pathname === child.path;
                     const Icon = child.icon;
@@ -91,7 +91,7 @@ const Sidebar = ({ collapse, setCollapse }) => {
                       
                       >
                         <Icon size={20} className={` ${isActive ? "text-[#0057A3]" : "text-[#0D141C]"}`} />
-                        <p className={`${isActive ? "text-[#0057A3]" : "text-[#0D141C]"}`}>{child.label}</p>
+                        <p className={`${isActive ? "text-[#0057A3]" : "text-[#0D141C]"} text-[15px] font-[700] font-inter leading-[21px]`}>{child.label}</p>
                       </div>
                     );
                   })}

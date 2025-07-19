@@ -10,6 +10,10 @@ import settings from "../assets/settings.svg"
 import { FaUserPlus } from "react-icons/fa";
 import { RiTeamFill } from "react-icons/ri";
 import { FaFileInvoiceDollar } from "react-icons/fa6";
+import { IoChatbubbleOutline } from "react-icons/io5";
+import { TbUsersGroup } from "react-icons/tb";
+import { LuMessageSquareMore } from "react-icons/lu";
+
 
 export const menuItems = [
   {
@@ -23,6 +27,38 @@ export const menuItems = [
     icon: crm,
     path: "/dashboard/crm",
     label: "CRM",
+    children : [
+      {
+        id: "contacts",
+        label: "Contacts",
+          path: "/dashboard/crm/contacts",
+        icon: IoChatbubbleOutline
+        
+      },
+
+      {
+          id: "company",
+          icon: TbUsersGroup,
+          path: "/dashboard/crm/company",
+          label: "Company",
+      },
+
+      {
+        id: "deals",
+        icon: TbUsersGroup,
+        path: "/dashboard/crm/deals",
+        label: "Deals",
+    },
+
+    {
+      id: "tickets",
+      icon: TbUsersGroup,
+      path: "/dashboard/crm/tickets",
+      label: "Tickets",
+  },
+
+
+    ]
   },
 
   {
@@ -51,6 +87,22 @@ export const menuItems = [
     icon: integrations,
     path: "/dashboard/integration",
     label: "Integration",
+    children : [
+      {
+        id: "communication-channels",
+        label: "Communication Channels",
+        path: "/dashboard/integration/communication-channels",
+        icon: IoChatbubbleOutline
+        
+      },
+
+      {
+          id: "crm",
+          icon: TbUsersGroup,
+          path: "/dashboard/crm",
+          label: "CRM",
+      }
+    ]
   },
 
   {
@@ -58,6 +110,14 @@ export const menuItems = [
     icon: manage,
     path: "/dashboard/manage",
     label: "Manage",
+    children: [
+      {
+        id: "template-message",
+        label: "Template Message",
+        path: "/dashboard/manage/template-message",
+        icon: LuMessageSquareMore
+      },
+    ]
   },
 
   {
@@ -122,6 +182,29 @@ export const projects = [
     id: 4,
     projectName: "Smart RFID Cards",
     status: "Active",
+    date: "2021-01-01",
+  },
+] 
+
+export const teams = [
+  {
+    id: 1,
+    team_name: "SIC Team",
+    total_member: 12,
+    date: "2021-01-01",
+  },
+
+  {
+    id: 2,
+    team_name: "SIC Team",
+    total_member: 12,
+    date: "2021-01-01",
+  },
+
+  {
+    id: 3,
+    team_name: "SIC Team",
+    total_member: 12,
     date: "2021-01-01",
   },
 ] 
